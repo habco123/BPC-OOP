@@ -8,13 +8,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace cv11.EFCore
 {
-    internal class Student
+    internal class Predmet
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int StudentId { get; set; }
-        public string Jmeno { get; set; }
-        public string Prijmeni { get; set; }
-        public DateTime DatumNarozeni { get; set; }
+        public string Zkratka { get; set; }
+        public string Nazev { get; set; }
+
+
 
         public ICollection<StudentPredmet> StudentPredmety { get; set; }
         public ICollection<Hodnoceni> Hodnoceni { get; set; }
